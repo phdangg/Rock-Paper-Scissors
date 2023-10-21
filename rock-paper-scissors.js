@@ -5,6 +5,9 @@ function getComputerChoice(){
     return choices[randomIndex];
 }
 function playRound(playerSelection, computerSelection) {
+    if (playerSelection === null) {
+        return "Game canceled.";
+    }
     playerSelection = playerSelection.toLowerCase();
     computerSelection = computerSelection.toLowerCase();
     if (playerSelection == computerSelection)
@@ -15,7 +18,7 @@ function playRound(playerSelection, computerSelection) {
                 return "You Win! " +  playerSelection + " beats " +  computerSelection;
            }
     else
-        return "You Lose! " +  comptuterSelection + " beats " +  playerelection;
+        return "You Lose! " +  computerSelection + " beats " +  playerSelection;
        
 }
 function game(){
